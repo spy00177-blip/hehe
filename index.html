@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For The Most Beautiful Girl ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Terminal Intro -->
+    <div id="terminal-screen" class="screen active">
+        <div class="terminal-text" id="typewriter"></div>
+        <button id="enter-btn" class="hidden glow-btn">Grant Access</button>
+    </div>
+
+    <!-- The Journey -->
+    <div id="main-experience" class="screen hidden">
+        
+        <section class="panel panel-1">
+            <h1 class="fade-in">Hey...</h1>
+            <p class="fade-in delay-1">I know things are a little tense right now.</p>
+            <p class="fade-in delay-2">And I know I completely messed up.</p>
+            <div class="scroll-indicator fade-in delay-3">Scroll down ↓</div>
+        </section>
+
+        <section class="panel panel-2">
+            <h1 class="slide-up">But before you write me off...</h1>
+            <p class="slide-up delay-1">Let's just slow down and review some undeniable facts.</p>
+            <p class="slide-up delay-2">(Because I've been thinking about you non-stop.)</p>
+        </section>
+
+        <section class="panel panel-3">
+            <h2 class="fade-in">Pop the bubbles floating around...</h2>
+            <div class="bubble-container" id="bubble-container">
+                <!-- Bubbles injected by JS -->
+            </div>
+            <p id="all-popped-msg" class="hidden secret-msg">You see? You're literally perfect.</p>
+        </section>
+
+        <!-- ACTIVITY 1: The Anger Slider -->
+        <section class="panel panel-4">
+            <h1 class="fade-in">Just checking...</h1>
+            <h2 class="slide-up">How mad are you right now?</h2>
+            <div class="slider-container slide-up delay-1">
+                <div class="slider-emoji" id="anger-emoji">😡</div>
+                <input type="range" min="0" max="100" value="100" class="anger-slider" id="anger-slider">
+                <p id="anger-msg" class="anger-msg">100% - Ready to commit a crime</p>
+                <button class="btn primary-btn hidden" id="anger-next-btn">Okay, let's keep going.</button>
+            </div>
+        </section>
+
+        <section class="panel panel-5">
+            <h1 class="scale-in">So when I act like an idiot...</h1>
+            <p class="scale-in delay-1">It's honestly not because I don't care.</p>
+            <p class="scale-in delay-2">It's just that sometimes my common sense accidentally goes offline.</p>
+            <p class="scale-in delay-3 emphasized">But my heart never does.</p>
+        </section>
+
+        <!-- ACTIVITY 2: Bop-a-Mole Frustration Outlet -->
+        <section class="panel panel-6">
+            <h2 class="fade-in">If you're still annoyed, please feel free to take it out on me.</h2>
+            <p class="fade-in delay-1" style="font-size: 1.1rem; color: #ffb6c1;">(Bonk the monkey to vent your frustration!)</p>
+            
+            <div class="whack-game fade-in delay-2">
+                <p style="font-size: 1.5rem; text-transform: uppercase;">Hits: <span id="whack-score" style="color: #ff477e; font-weight: bold;">0</span> / 5</p>
+                <div class="holes-container">
+                    <div class="hole"><div class="mole">🐒</div></div>
+                    <div class="hole"><div class="mole">🐒</div></div>
+                    <div class="hole"><div class="mole">🐒</div></div>
+                    <div class="hole"><div class="mole">🐒</div></div>
+                    <div class="hole"><div class="mole">🐒</div></div>
+                    <div class="hole"><div class="mole">🐒</div></div>
+                </div>
+                <!-- Inline style animation fix -->
+                <div id="whack-end" class="hidden secret-msg" style="margin-top: 30px; font-size: 1.5rem; opacity: 1; transform: scale(1);">
+                    Ouch! Okay, I'm sufficiently bruised! 🤕 Let's declare peace!
+                </div>
+            </div>
+        </section>
+
+        <section class="panel panel-7">
+            <div class="apology-card glass-card">
+                <h1 class="fade-in">I am genuinely sorry.</h1>
+                <p class="fade-in delay-1">I hate knowing that I wiped that gorgeous smile off your face. You deserve the absolute best, and I promise I'm trying to be exactly that for you.</p>
+                <div class="heart-container fade-in delay-2" id="broken-heart">
+                    💔 <span class="click-hint">(Click to fix my mess)</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel panel-8 hidden" id="final-panel">
+            <h1 class="slide-up">So... do you forgive your idiot?</h1>
+            <div class="button-group fade-in delay-1">
+                <button class="btn success-btn glow" id="btn-yes">Yes, I forgive you</button>
+                <button class="btn danger-btn" id="btn-no">No way</button>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Final Celebration -->
+    <div id="celebration-screen" class="screen hidden">
+        <h1 class="pulse">I LOVE YOU! 💖</h1>
+        <p>You're the absolute best. Treat's on me tonight!</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
